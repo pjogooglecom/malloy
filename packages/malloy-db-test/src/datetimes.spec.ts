@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 /*
  * Copyright 2021 Google LLC
  *
@@ -11,8 +10,7 @@
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
  */
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
+/* eslint-disable no-console */
 
 import { RuntimeList } from "./runtimes";
 import "./is-sql-eq";

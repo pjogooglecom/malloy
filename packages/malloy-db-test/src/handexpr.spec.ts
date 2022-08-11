@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 /*
  * Copyright 2021 Google LLC
  *
@@ -7,10 +6,11 @@
  * version 2 as published by the Free Software Foundation.
  *
  * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without evenro the implied warranty of
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
  */
+/* eslint-disable no-console */
 
 import { ModelDef, Query, StructDef } from "@malloydata/malloy";
 import { fStringEq, fStringLike } from "./test_utils";

@@ -1,5 +1,5 @@
 /*
- * Copyright 2021 Google LLC
+ * Copyright 2022 Google LLC
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License
@@ -33,7 +33,7 @@ module.exports = {
   parserOptions: {
     warnOnUnsupportedTypeScriptVersion: false,
   },
-  plugins: ["@typescript-eslint", "prettier"],
+  plugins: ["header", "@typescript-eslint", "prettier"],
   rules: {
     "no-console": "warn",
     "prettier/prettier": "error",
@@ -43,6 +43,28 @@ module.exports = {
     "@typescript-eslint/no-unused-vars": [
       "warn",
       { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
+    ],
+    "header/header": [
+      2,
+      "block",
+      [
+        "",
+        {
+          pattern: " \\* Copyright \\d{4} Google LLC",
+          template: " * Copyright 2022 Google LLC",
+        },
+        " *",
+        " * This program is free software; you can redistribute it and/or",
+        " * modify it under the terms of the GNU General Public License",
+        " * version 2 as published by the Free Software Foundation.",
+        " *",
+        " * This program is distributed in the hope that it will be useful,",
+        " * but WITHOUT ANY WARRANTY; without even the implied warranty of",
+        " * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the",
+        " * GNU General Public License for more details.",
+        " ",
+      ],
+      1,
     ],
   },
 };

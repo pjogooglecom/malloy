@@ -54,6 +54,7 @@
     "csv-stringify": "^5.6.5",
     "eslint": "^7.28.0",
     "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-header": "^3.1.1",
     "eslint-plugin-prettier": "^3.4.0",
     "jest": "^26.6.0",
     "jest-diff": "^27.0.6",

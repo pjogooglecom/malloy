@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 /*
  * Copyright 2021 Google LLC
  *
@@ -11,6 +10,7 @@
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU General Public License for more details.
  */
+/* eslint-disable no-console */
 
 import * as malloy from "@malloydata/malloy";
 import { RuntimeList } from "./runtimes";
