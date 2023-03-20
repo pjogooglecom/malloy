@@ -801,6 +801,27 @@ runtimes.runtimeMap.forEach((runtime, databaseName) => {
     }
   });
 
+  it(`can run an anonymous query from_sql sources - ${databaseName}`, async () => {
+    const model = runtime.loadModel(`
+    source: orig is table('malloytest.state_facts') {
+      dimension: custom is 'CUSTOM'
+    }
+    query: first100 is orig -> { project: *; limit: 100 }
+    sql: to_sql is {
+      select: """
+        SELECT *
+        FROM (%{ ->first100 }% )
+      """
+    }
+    source: back_to_malloy is from_sql(to_sql)`);
+
+    const query = model.loadQuery(
+      'query: back_to_malloy->{ project: *; limit: 20 }'
+    );
+    const result = await query.run();
+    expect(result).toEqual('foo');
+  });
+
   // it(`sql_block version- ${databaseName}`, async () => {
   //   const result = await runtime
   //     .loadQuery(
